@@ -1,4 +1,4 @@
-function fr (find, replace) {
+function fire (find, replace) {
   const elements = document.getElementsByTagName("*");
   for (let i = 0; i < elements.length; i++) {
     const element = elements[i];
