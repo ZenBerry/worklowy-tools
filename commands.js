@@ -1,6 +1,8 @@
 // use with Scripty Chrome extension:
 // https://chrome.google.com/webstore/detail/scripty-javascript-inject/milkbiaeapddfnpenedfgbfdacpbcbam
 
+let displayGlobalTags = true;
+
 function flatSearch() { // flat search. Doesn't work from the injector for now cause the WF object is not accessible. @TODO
   function toastMsg(str, sec, err) {
     WF.showMessage(str, err);
@@ -41,7 +43,6 @@ function flatSearch() { // flat search. Doesn't work from the injector for now c
 }
 
 function toggleTags() {
-  let displayGlobalTags = true;
 
   function t1() { // turn on the tags fast, works globally
     console.clear();
