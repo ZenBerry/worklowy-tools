@@ -3,7 +3,11 @@
 
 let displayGlobalTags = true;
 
-function flatSearch() { // flat search. Doesn't work from the injector for now cause the WF object is not accessible. @TODO
+function flatSearch() {
+  // flat search. Doesn't work from the injector for now cause the WF object is not accessible.
+  // @TODO: try window.location = *single-lined file*
+  // https://tools.knowledgewalls.com/online-multiline-to-single-line-converter
+
   function toastMsg(str, sec, err) {
     WF.showMessage(str, err);
     setTimeout(WF.hideMessage, (sec || 2) * 1000);
