@@ -1,8 +1,7 @@
 // use with Scripty Chrome extension:
 // https://chrome.google.com/webstore/detail/scripty-javascript-inject/milkbiaeapddfnpenedfgbfdacpbcbam
 
-function flatSearch() { // flat search
-  console.log('flat search');
+function flatSearch() { // flat search. Doesn't work from the injector for now cause the WF object is not accessible. @TODO
   function toastMsg(str, sec, err) {
     WF.showMessage(str, err);
     setTimeout(WF.hideMessage, (sec || 2) * 1000);
