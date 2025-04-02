@@ -1,0 +1,14 @@
+1. To fix inconsistent behaviour on cmd+k / ctrl+k which opens the link editor instead of the jump menu:
+
+- look for this line in wf-base.js: respondToKeyDown({editor: e, shortcut: c})
+- remove the following: 
+
+ let t = Ft.instance();
+  if (e.caret.stretched())
+      return t.openForCaret(e.caret);
+  if (Q9.targetedIn(e.caret))
+      return t.openForcefully({
+          for: Q9.from(e.caret)
+      })
+
+- override!
